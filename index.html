@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <h1>Gestión de Tareas</h1>
+
+    <div>
+        <label class=" filtro" for="filtroUsuario">Filtrar por usuario:</label>
+        <!-- Select para filtrar las tareas por usuario -->
+        <select class=" filtro1" id="filtroUsuario"></select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Estado</th>
+                <th>Fecha Vencimiento</th>
+                <th>Usuario</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <!-- Aquí se van a cargar las tareas dinámicamente -->
+        <tbody id="listaTareas"></tbody>
+    </table>
+
+    <h2>Crear nuevo usuario:</h2>
+<form id="formNuevoUsuario">
+  <input type="text" id="nombreUsuario" placeholder="Nombre de usuario" required />
+  <label class="admin">
+    <input type="checkbox" id="esAdminUsuario" />
+    Administrador
+  </label>
+  <button type="submit">Crear usuario</button>
+</form>
+
+    <h2>Crear Nueva Tarea:</h2>
+    <!-- Formulario para crear nuevas tareas -->
+    <form id="formNuevaTarea">
+        <div  class= "nuevaTarea">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required />
+
+        <label for="fechaCreacion">Fecha Creación:</label>
+        <input type="date" id="fechaCreacion" name="fechaCreacion" required />
+
+        <label for="fechaVencimiento">Fecha Vencimiento:</label>
+        <input type="date" id="fechaVencimiento" name="fechaVencimiento" required />
+
+        <label for="usuarioAsignado">Usuario asignado:</label>
+        <!-- Select para elegir usuario asignado, se llena dinámicamente -->
+        <select  class=" filtro1" id="usuarioAsignado" name="usuarioAsignado" required></select>
+
+        <label>
+            <!-- Checkbox que indica si la tarea está pendiente -->
+            <input type="checkbox" id="estadoPendiente" name="estado" checked />
+            Pendiente
+        </label>
+
+        <button type="submit">Crear Tarea</button>
+    </form>
+
+    </div>
+
+    <!-- Script para la lógica JS -->
+    <script src="scriptVersionAvanzada.js"></script>
+</body>
+</html>

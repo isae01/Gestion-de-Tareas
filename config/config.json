@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Holaubuntu",
+    "database": "gestion_tareas",
+    "host": "192.168.0.14",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Holaubuntu",
+    "database": "gestion_tareas",
+    "host": "192.168.0.14",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Holaubuntu",
+    "database": "gestion_tareas",
+    "host": "192.168.0.14",
+    "dialect": "postgres"
+  }
+}
